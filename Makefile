@@ -9,6 +9,7 @@ funcs.o: funcs.cpp funcs.h
 main.o: main.cpp funcs.h
 
 tests.o: tests.cpp doctest.h funcs.h
+	g++ -c -std=c++11 tests.cpp
 
 clean:
-	rm -f main.o funcs.o tests.o tests main
+	rm -f main.o funcs.o tests.o main tests
